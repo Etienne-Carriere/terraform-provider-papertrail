@@ -78,8 +78,6 @@ github.com/aws/aws-sdk-go/service/sts/stsiface
 github.com/bgentry/go-netrc/netrc
 # github.com/bgentry/speakeasy v0.1.0
 github.com/bgentry/speakeasy
-# github.com/blang/semver v0.0.0-20170202183821-4a1e882c79dc
-github.com/blang/semver
 # github.com/davecgh/go-spew v1.1.1
 github.com/davecgh/go-spew/spew
 # github.com/fatih/color v1.7.0
@@ -128,7 +126,7 @@ github.com/hashicorp/go-safetemp
 github.com/hashicorp/go-uuid
 # github.com/hashicorp/go-version v1.3.0
 github.com/hashicorp/go-version
-# github.com/hashicorp/hcl v0.0.0-20170509225359-392dba7d905e
+# github.com/hashicorp/hcl v0.0.0-20170504190234-a4b07c25de5f
 github.com/hashicorp/hcl
 github.com/hashicorp/hcl/hcl/ast
 github.com/hashicorp/hcl/hcl/parser
@@ -150,26 +148,8 @@ github.com/hashicorp/hcl/v2/hclparse
 github.com/hashicorp/hcl/v2/hclsyntax
 github.com/hashicorp/hcl/v2/hclwrite
 github.com/hashicorp/hcl/v2/json
-# github.com/hashicorp/hil v0.0.0-20170512213305-fac2259da677
-github.com/hashicorp/hil
-github.com/hashicorp/hil/ast
-github.com/hashicorp/hil/parser
-github.com/hashicorp/hil/scanner
 # github.com/hashicorp/logutils v1.0.0
 github.com/hashicorp/logutils
-# github.com/hashicorp/terraform v0.0.0-20170620210554-c10f5caf056f
-github.com/hashicorp/terraform/config
-github.com/hashicorp/terraform/config/module
-github.com/hashicorp/terraform/dag
-github.com/hashicorp/terraform/flatmap
-github.com/hashicorp/terraform/helper/experiment
-github.com/hashicorp/terraform/helper/hashcode
-github.com/hashicorp/terraform/helper/hilmapstructure
-github.com/hashicorp/terraform/helper/schema
-github.com/hashicorp/terraform/helper/shadow
-github.com/hashicorp/terraform/moduledeps
-github.com/hashicorp/terraform/plugin/discovery
-github.com/hashicorp/terraform/terraform
 # github.com/hashicorp/terraform-config-inspect v0.0.0-20191212124732-c6ae6269b9d7
 github.com/hashicorp/terraform-config-inspect/tfconfig
 # github.com/hashicorp/terraform-exec v0.13.3
@@ -263,8 +243,6 @@ github.com/mitchellh/go-homedir
 github.com/mitchellh/go-testing-interface
 # github.com/mitchellh/go-wordwrap v1.0.0
 github.com/mitchellh/go-wordwrap
-# github.com/mitchellh/hashstructure v0.0.0-20170609045927-2bca23e0e452
-github.com/mitchellh/hashstructure
 # github.com/mitchellh/mapstructure v1.1.2
 github.com/mitchellh/mapstructure
 # github.com/mitchellh/reflectwalk v1.0.1
@@ -274,9 +252,6 @@ github.com/oklog/run
 # github.com/oogway/goptrail v0.0.0-20171209085443-a1597dd3a24c
 ## explicit
 github.com/oogway/goptrail
-# github.com/oogway/terraform-provider-papertrail v0.0.0-20190724083128-4cd329b0aff0
-## explicit
-github.com/oogway/terraform-provider-papertrail/papertrail
 # github.com/pkg/errors v0.9.1
 github.com/pkg/errors
 # github.com/posener/complete v1.2.1
@@ -284,9 +259,8 @@ github.com/posener/complete
 github.com/posener/complete/cmd
 github.com/posener/complete/cmd/install
 github.com/posener/complete/match
-# github.com/satori/go.uuid v0.0.0-20170321230731-5bf94b69c6b6
-github.com/satori/go.uuid
-# github.com/sethgrid/pester v0.0.0-20171127025028-760f8913c048
+# github.com/sethgrid/pester v1.1.0
+## explicit
 github.com/sethgrid/pester
 # github.com/spf13/afero v1.2.2
 github.com/spf13/afero
@@ -360,8 +334,6 @@ golang.org/x/mod/semver
 # golang.org/x/net v0.0.0-20210326060303-6b1517762897
 golang.org/x/net/context
 golang.org/x/net/context/ctxhttp
-golang.org/x/net/html
-golang.org/x/net/html/atom
 golang.org/x/net/http/httpguts
 golang.org/x/net/http2
 golang.org/x/net/http2/hpack
