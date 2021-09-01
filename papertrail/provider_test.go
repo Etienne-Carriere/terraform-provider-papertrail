@@ -42,4 +42,3 @@ func testAccPreCheckWithDestinationPort(t *testing.T) {
 		t.Fatal("DESTINATION_PORT must be set for acceptance tests")
 	}
 }
-

@@ -18,7 +18,6 @@ import (
 
 func TestAccPapertrailSystemGroup_basic(t *testing.T) {
 
-
 	resource.Test(t, resource.TestCase{
 		PreCheck:  func() { testAccPreCheckWithDestinationPort(t) },
 		Providers: testAccProviders,
