@@ -9,8 +9,8 @@ import (
 
 	"strconv"
 
-	"github.com/pkg/errors"
 	"github.com/hashicorp/go-retryablehttp"
+	"github.com/pkg/errors"
 )
 
 type DefaultClient struct {
