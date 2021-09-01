@@ -33,7 +33,7 @@ jobs:
       run: make testacc
       env:
         PAPERTRAIL_TOKEN: ${{ secrets.PAPERTRAIL_TOKEN }}
-        DESTINATION_PORT: 1234
+        DESTINATION_PORT: 12931
 
   build: 
     env: 
