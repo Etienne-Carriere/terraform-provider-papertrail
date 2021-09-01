@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/Etienne-Carriere/terraform-provider-papertrail/lowlevel/goptrail"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/terraform"
-	"github.com/Etienne-Carriere/terraform-provider-papertrail/lowlevel/goptrail"
 )
 
 func TestAccPapertrailSystem_basic(t *testing.T) {

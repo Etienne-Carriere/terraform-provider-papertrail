@@ -90,7 +90,6 @@ func (c *DefaultClient) GetSystem(id string) (*OutputSystem, error) {
 func (c *DefaultClient) RegisterSystem(s InputSystem) (OutputSystem, error) {
 	params := parseSystemParams(s)
 	out := OutputSystem{}
-
 	err := c.execute("POST", "/systems", params, &out)
 	return out, err
 }
@@ -259,13 +258,16 @@ func (c *DefaultClient) execute(method, path string, reqParams map[string]string
 		return errors.Wrapf(err, "[%v] Cannot read body", path)
 	}
 
-	errMessage := struct {
+	/*errMessage := struct {
 		Message string `json:"message"`
 	}{}
 
 	if resp.StatusCode >= 400 {
 		json.Unmarshal(body, &errMessage)
 		return errors.New(errMessage.Message)
+	}*/
+	if resp.StatusCode >= 400{
+		return errors.New(fmt.Sprintf("%s %s",resp.StatusCode,string(body)))
 	}
 
 	if err := json.Unmarshal(body, respBody); err != nil {

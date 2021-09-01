@@ -3,8 +3,8 @@ package papertrail
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/Etienne-Carriere/terraform-provider-papertrail/lowlevel/goptrail"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 )
 
 func providerConfigure(d *schema.ResourceData) (interface{}, error) {
