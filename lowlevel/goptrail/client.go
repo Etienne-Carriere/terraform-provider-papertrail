@@ -141,7 +141,7 @@ func (c *DefaultClient) ListGroups() ([]Group, error) {
 func (c *DefaultClient) UpdateGroup(g Group) error {
 	params := parseGroupParams(g)
 	var out interface{}
-	path := fmt.Sprintf("/groups/%s", g.ID)
+	path := fmt.Sprintf("/groups/%d", g.ID)
 
 	return c.execute("PUT", path, params, &out)
 }
@@ -267,7 +267,7 @@ func (c *DefaultClient) execute(method, path string, reqParams map[string]string
 		return errors.New(errMessage.Message)
 	}*/
 	if resp.StatusCode >= 400 {
-		return errors.New(fmt.Sprintf("%s %s", resp.StatusCode, string(body)))
+		return errors.New(fmt.Sprintf("%d %s", resp.StatusCode, string(body)))
 	}
 
 	if err := json.Unmarshal(body, respBody); err != nil {
