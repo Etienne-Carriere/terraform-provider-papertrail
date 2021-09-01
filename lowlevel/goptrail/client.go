@@ -266,8 +266,8 @@ func (c *DefaultClient) execute(method, path string, reqParams map[string]string
 		json.Unmarshal(body, &errMessage)
 		return errors.New(errMessage.Message)
 	}*/
-	if resp.StatusCode >= 400{
-		return errors.New(fmt.Sprintf("%s %s",resp.StatusCode,string(body)))
+	if resp.StatusCode >= 400 {
+		return errors.New(fmt.Sprintf("%s %s", resp.StatusCode, string(body)))
 	}
 
 	if err := json.Unmarshal(body, respBody); err != nil {
