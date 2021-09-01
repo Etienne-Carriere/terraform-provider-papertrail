@@ -33,3 +33,13 @@ func testAccPreCheck(t *testing.T) {
 		t.Fatal("PAPERTRAIL_TOKEN must be set for acceptance tests")
 	}
 }
+
+func testAccPreCheckWithDestinationPort(t *testing.T) {
+	if v := os.Getenv("PAPERTRAIL_TOKEN"); v == "" {
+		t.Fatal("PAPERTRAIL_TOKEN must be set for acceptance tests")
+	}
+	if v := os.Getenv("DESTINATION_PORT"); v == "" {
+		t.Fatal("DESTINATION_PORT must be set for acceptance tests")
+	}
+}
+

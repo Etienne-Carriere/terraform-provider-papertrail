@@ -17,17 +17,13 @@ import (
 
 func TestAccPapertrailSystem_basic(t *testing.T) {
 	name := fmt.Sprintf("tf-test-%s", acctest.RandString(10))
-	destination_port := os.Getenv("DESTINATION_PORT")
-	if destination_port == "" {
-		t.Error("'DESTINATION_PORT' ENV var is not set or invalid")
-	}
 
 	resource.Test(t, resource.TestCase{
-		PreCheck:  func() { testAccPreCheck(t) },
+		PreCheck:  func() { testAccPreCheckWithDestinationPort(t) },
 		Providers: testAccProviders,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccPapertrailSystemConfig(name, destination_port),
+				Config: testAccPapertrailSystemConfig(name, os.Getenv("DESTINATION_PORT")),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckSystemExists("papertrail_system.system"),
 					resource.TestCheckResourceAttr("papertrail_system.system", "name", name),

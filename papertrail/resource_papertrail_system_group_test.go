@@ -17,17 +17,14 @@ import (
 )
 
 func TestAccPapertrailSystemGroup_basic(t *testing.T) {
-	port := os.Getenv("DESTINATION_PORT")
-	if port == "" {
-		t.Error("'DESTINATION_PORT' ENV var is not set or invalid")
-	}
+
 
 	resource.Test(t, resource.TestCase{
-		PreCheck:  func() { testAccPreCheck(t) },
+		PreCheck:  func() { testAccPreCheckWithDestinationPort(t) },
 		Providers: testAccProviders,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccPapertrailSystemGroupConfig(port),
+				Config: testAccPapertrailSystemGroupConfig(os.Getenv("DESTINATION_PORT")),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckSystemGroupExists("papertrail_system_group.psg"),
 					resource.TestCheckResourceAttrSet("papertrail_system_group.psg", "system_id"),
