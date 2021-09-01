@@ -5,8 +5,8 @@ import (
 
 	"strconv"
 
+	"github.com/Etienne-Carriere/terraform-provider-papertrail/lowlevel/goptrail"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
-	"github.com/oogway/goptrail"
 )
 
 func resourcePapertrailSearch() *schema.Resource {
@@ -21,10 +21,6 @@ func resourcePapertrailSearch() *schema.Resource {
 			State: schema.ImportStatePassthrough,
 		},
 		Schema: map[string]*schema.Schema{
-			"id": {
-				Type:     schema.TypeString,
-				Computed: true,
-			},
 			"name": {
 				Type:     schema.TypeString,
 				Required: true,
