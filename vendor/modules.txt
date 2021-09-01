@@ -120,6 +120,9 @@ github.com/hashicorp/go-multierror
 # github.com/hashicorp/go-plugin v1.3.0
 github.com/hashicorp/go-plugin
 github.com/hashicorp/go-plugin/internal/plugin
+# github.com/hashicorp/go-retryablehttp v0.7.0
+## explicit
+github.com/hashicorp/go-retryablehttp
 # github.com/hashicorp/go-safetemp v1.0.0
 github.com/hashicorp/go-safetemp
 # github.com/hashicorp/go-uuid v1.0.1
@@ -257,9 +260,6 @@ github.com/posener/complete
 github.com/posener/complete/cmd
 github.com/posener/complete/cmd/install
 github.com/posener/complete/match
-# github.com/sethgrid/pester v1.1.0
-## explicit
-github.com/sethgrid/pester
 # github.com/spf13/afero v1.2.2
 github.com/spf13/afero
 github.com/spf13/afero/mem
